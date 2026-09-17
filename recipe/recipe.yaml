@@ -1,16 +1,16 @@
 context:
-  version: "0.2.2"
+  version: "0.2.3"
 
 package:
   name: polars-io-tools
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/0e/cd/8dbdd932d0eb89f350f9591587a0889f3a4982291000acb8ea76d18ebc80/polars_io_tools-${{ version }}.tar.gz
-  sha256: 49452212a7c71cffaf3b48508f80e5db8a4a49a6c880940bfe89c719ee02e437
+  url: https://files.pythonhosted.org/packages/54/07/8902126eb4e473d33bc788fd30a98c2377599b639cacae8bab78d9aa2948/polars_io_tools-${{ version }}.tar.gz
+  sha256: 4ccb3b258a123be3f6ee90dbff676ddc28376460af76cb0740f69f53a2181950
 
 build:
-  number: 2
+  number: 0
   python:
     version_independent: true
   script:
@@ -44,25 +44,10 @@ requirements:
         - python-abi3
   run:
     - python >=${{ python_min }}
-    - arrow_odbc
-    - boto3
-    - cloudpickle
-    - deltalake
-    - duckdb
-    - narwhals
-    - numpy
-    - orjson
     - packaging
-    - pandas
     - polars
     - portion
-    - pyarrow
-    - pyodbc
     - pydantic
-    - ray-core
-    - requests
-    - sqlglot
-    - tqdm
 
 tests:
   - python:
